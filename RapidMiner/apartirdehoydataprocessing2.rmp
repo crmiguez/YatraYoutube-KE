@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.0.002">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.0.002" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="9.0.002" expanded="true" height="68" name="apartirdehoy_csv" width="90" x="45" y="136">
+        <parameter key="csv_file" value="C:\Users\canro\Documents\workspace\youtube-ke\EN_apartirdehoy_1546513201698.csv"/>
+        <parameter key="column_separators" value=";"/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value="MMM d, yyyy h:mm:ss a z"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="ï»¿id.true.integer.attribute"/>
+          <parameter key="1" value="Name_User.true.polynominal.attribute"/>
+          <parameter key="2" value="Date_Comment.true.polynominal.attribute"/>
+          <parameter key="3" value="Type_Comment.true.polynominal.attribute"/>
+          <parameter key="4" value="Number_Likes.true.integer.attribute"/>
+          <parameter key="5" value="Text.true.polynominal.attribute"/>
+          <parameter key="6" value="Hashtag.true.polynominal.attribute"/>
+          <parameter key="7" value="Language.true.polynominal.attribute"/>
+          <parameter key="8" value="Reaction.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="true"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <operator activated="true" class="multiply" compatibility="9.0.002" expanded="true" height="82" name="Multiply" width="90" x="179" y="34"/>
+      <operator activated="true" class="store" compatibility="9.0.002" expanded="true" height="68" name="Store" width="90" x="313" y="34">
+        <parameter key="repository_entry" value="../data/apartirdehoy_data"/>
+      </operator>
+      <connect from_op="apartirdehoy_csv" from_port="output" to_op="Multiply" to_port="input"/>
+      <connect from_op="Multiply" from_port="output 1" to_op="Store" to_port="input"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+    </process>
+  </operator>
+</process>
