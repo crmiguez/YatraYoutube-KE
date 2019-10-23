@@ -101,11 +101,11 @@ public class YouTubeCommentsYatraDataset {
 	  
 	  
 	  //Old API Key (crmiguez@esei.uvigo.es)
-	  String oldAPIKey = "AIzaSyDO5D4za_p88J8F-mi4nkBd_9zrDhRz2yM";
-	  String oldAPIKeyTwo = "AIzaSyC8mpko6rAnwEF6xtMivc1UPL5YqnpWLf0";
+	  	//String oldAPIKey = {Used a first API KEY in the first month};
+	  	//String oldAPIKeyTwo = {Used a second API KEY in the second month};
 	  
 	  //New API Key
-	  String newAPIKey = "AIzaSyBxBN0H9dc_fWGUzDroMspcQAvLoae9NJM";
+	  	//String newAPIKey = {Used a third API KEY in the final project};
 	
      //Create a String List for videoId, some Sebastian Yatra's music videos
 	  List<Video> videoList = new ArrayList<Video>();
@@ -120,8 +120,8 @@ public class YouTubeCommentsYatraDataset {
 	  */
 	  
 	  /*
-	  // My Only One (English Version No Hay Nadie Más, ft. Isabela Moner)
-	  videoList.add(new Video("My Only One (English Version No Hay Nadie Más, ft. Isabela Moner)",
+	  // My Only One (English Version No Hay Nadie Mï¿½s, ft. Isabela Moner)
+	  videoList.add(new Video("My Only One (English Version No Hay Nadie Mï¿½s, ft. Isabela Moner)",
 			  				  	"Y82H_pgqKdY","myonlyone"));
 	  */
 	
